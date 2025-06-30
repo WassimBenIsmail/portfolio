@@ -1,5 +1,40 @@
-import React, { useState } from 'react';
-import { ExternalLink, ChevronLeft, ChevronRight, X, TrendingUp, DollarSign, Users, Award, Globe, Sparkles } from 'lucide-react';
+import React, { useState } from "react";
+import {
+  ExternalLink,
+  ChevronLeft,
+  ChevronRight,
+  X,
+  TrendingUp,
+  DollarSign,
+  Mic,
+  Route,
+  Sparkles,
+  Brain,
+  Rocket,
+} from "lucide-react";
+
+import TLC from "../images/TLC.png";
+import Bel from "../images/Bel.png";
+import JorniLogo from "../images/jorni.jpg";
+import Jorni1 from "../images/jorni1.png";
+import Jorni2 from "../images/jorni2.png";
+import Jorni3 from "../images/jorni3.png";
+import Raise from "../images/raise.png";
+import EL from "../images/EL.jpeg";
+import EL1 from "../images/EL1.webp";
+import EL2 from "../images/EL2.webp";
+import EL3 from "../images/EL3.webp";
+import EL4 from "../images/EL4.png";
+import SLB from "../images/SLB.jpeg";
+import SLB1 from "../images/slb1.png";
+import SLB2 from "../images/slb2.png";
+import Metron from "../images/Metron.jpeg";
+import metron1 from "../images/metron1.png";
+import metron2 from "../images/metron2.png";
+import raise1 from "../images/raisesens1.png";
+import raise2 from "../images/raisesens2.png";
+import raise3 from "../images/raisesens3.png";
+import raise4 from "../images/raisesens4.png";
 
 const UseCasesSection = () => {
   const [selectedCase, setSelectedCase] = useState<number | null>(null);
@@ -7,126 +42,133 @@ const UseCasesSection = () => {
 
   const useCases = [
     {
-      company: "The Laughing Cow (Bel Groupe)",
-      logo: "https://images.pexels.com/photos/3184430/pexels-photo-3184430.jpeg?auto=compress&cs=tinysrgb&w=100&h=100",
-      outcome: "Built internal AI tools → cut costs €100K/year & enabled autonomous R&D ops",
-      context: "Bel Groupe needed to modernize their R&D operations and reduce operational costs while maintaining quality standards. The challenge was to implement AI-driven solutions that could automate repetitive tasks without disrupting existing workflows.",
+      company: "Bel Groupe",
+      logo: Bel,
+      outcome:
+        "Saved €100K+ annually while empowering researchers with instant, self-serve autonomy",
+      context:
+        "Bel Groupe, the company behind The Laughing Cow, needed to modernize R&D workflows and cut operational costs without sacrificing quality. I was brought in to build and launch internal AI- and ML-powered products, along with BI dashboards, to help teams innovate faste, smarter, and more autonomously",
       bulletPoints: [
-        "Analyzed existing R&D workflows and identified automation opportunities",
-        "Designed and developed custom AI tools for data processing and analysis",
-        "Implemented machine learning models for predictive quality control",
-        "Created automated reporting systems for management dashboards",
-        "Trained internal teams on new AI-powered processes",
-        "Established monitoring systems to track cost savings and efficiency gains"
+        "Launched a microbiology simulation tool in 2 months, ending years of stalled development by narrowing the scope through user research, saving €100K/year in licensing costs and stopping unnecessary spend",
+        "Prototyped and iterated an ML-based ingredient recommendation solution through user research, reducing product risk and defining the right scope",
+        "Led the development and launch of the ingredient recommendation tool, enabling R&D teams to autonomously replace ingredients in minutes instead of waiting days for experts input",
+        "Developed automated Power BI dashboards that eliminated hours of manual data work each week, reduced risk of errors, and allowed faster, more accurate insights across teams",
+        "Promoted an agile, product-first culture by championing short iterations, fast launches, and continuous learning using both user research and product analytics",
       ],
-      tags: ["Cost Reduction", "AI Implementation", "Process Automation"],
-      images: [
-        "https://images.pexels.com/photos/3184292/pexels-photo-3184292.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184339/pexels-photo-3184339.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184311/pexels-photo-3184311.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    },
-    {
-      company: "Raisesense",
-      logo: "https://images.pexels.com/photos/3184433/pexels-photo-3184433.jpeg?auto=compress&cs=tinysrgb&w=100&h=100",
-      outcome: "Delivered investor-aligned MVP → secured pre-seed funding",
-      context: "Raisesense was an early-stage startup with a promising concept but needed to create a compelling MVP that would resonate with investors and demonstrate clear market potential.",
-      bulletPoints: [
-        "Conducted market research to validate the core value proposition",
-        "Designed user-centric wireframes and interactive prototypes",
-        "Built a functional MVP with core features that investors could test",
-        "Created compelling pitch materials showcasing product-market fit",
-        "Implemented analytics to track user engagement and conversion metrics",
-        "Prepared technical documentation and roadmap for investor presentations"
-      ],
-      tags: ["Raised Funds", "MVP Development", "Investor Ready"],
-      images: [
-        "https://images.pexels.com/photos/3184360/pexels-photo-3184360.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184317/pexels-photo-3184317.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184298/pexels-photo-3184298.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
+      tags: ["Cost Reduction", "AI & ML"],
+      images: [],
     },
     {
       company: "Jorni",
-      logo: "https://images.pexels.com/photos/3184465/pexels-photo-3184465.jpeg?auto=compress&cs=tinysrgb&w=100&h=100",
-      outcome: "Scaled from zero to 60K+ users → monetized through partnerships",
-      context: "Jorni needed to build a user base from scratch and establish sustainable revenue streams. The challenge was creating a platform that would attract users while developing profitable partnership opportunities.",
+      logo: JorniLogo,
+      outcome:
+        "Led fast pivot and B2C app launch, unlocking €300K ARR and 60K+ users within a year",
+      context:
+        "With only few months of runway, Corefortech urgently pivoted to a new market opportunity to ensure survival. Leveraging the founder’s insights, I led the rapid build of a B2C mobile app that rewarded safe driving and fostered a community around it",
       bulletPoints: [
-        "Developed comprehensive user acquisition strategy and growth funnel",
-        "Built scalable platform architecture to handle rapid user growth",
-        "Implemented user engagement features to increase retention and activity",
-        "Identified and negotiated strategic partnerships for monetization",
-        "Created analytics dashboard to track user behavior and business metrics",
-        "Optimized conversion funnels to maximize partnership revenue"
+        "Identified ideal customer profiles via ad tests, surveys, and interviews, improving acquisition efficiency",
+        "Conducted discovery interviews to refine the app’s value proposition and designs, directly improving feature relevance and accelerating time-to-product-market fit",
+        "Led agile cross-functional teams to ship features faster while minimizing delivery risk",
+        "Scaled the user base to 60,000+ drivers through targeted acquisition strategies,  driving brand traction and €300K ARR via insurance and automotive manufacturers partnerships",
+        "Integrated analytics and user feedback loops to shorten iteration cycles and improve feature impact",
+        "Improved app communication, boosting retention and app ratings (4+ stars) while reducing churn",
       ],
-      tags: ["User Growth", "Monetization", "Partnerships"],
-      images: [
-        "https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184336/pexels-photo-3184336.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184319/pexels-photo-3184319.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    },
-    {
-      company: "Metron",
-      logo: "https://images.pexels.com/photos/3184435/pexels-photo-3184435.jpeg?auto=compress&cs=tinysrgb&w=100&h=100",
-      outcome: "Improved energy dashboards → increased conversions and stickiness",
-      context: "Metron's existing energy management dashboards were complex and difficult for users to navigate, resulting in low engagement and poor conversion rates. The goal was to redesign the user experience to be more intuitive and actionable.",
-      bulletPoints: [
-        "Conducted user research to understand pain points in existing dashboards",
-        "Redesigned information architecture for better data visualization",
-        "Implemented intuitive navigation and simplified user workflows",
-        "Created actionable insights and recommendations within the interface",
-        "A/B tested new designs to optimize for conversion and engagement",
-        "Developed onboarding flows to improve user adoption and retention"
-      ],
-      tags: ["UX Improvement", "Conversion Lift", "User Retention"],
-      images: [
-        "https://images.pexels.com/photos/3184297/pexels-photo-3184297.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184340/pexels-photo-3184340.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184310/pexels-photo-3184310.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
+      tags: ["Zero-to-One", "Growth", "AI & ML"],
+      images: [Jorni1, Jorni2, Jorni3],
     },
     {
       company: "Schlumberger",
-      logo: "https://images.pexels.com/photos/3184436/pexels-photo-3184436.jpeg?auto=compress&cs=tinysrgb&w=100&h=100",
-      outcome: "Launched global tool → saved $470K/year",
-      context: "Schlumberger required a global enterprise solution to optimize operational workflows across multiple regions and business units. The challenge was creating a tool that could scale internationally while delivering significant cost savings.",
+      logo: SLB,
+      outcome:
+        "Saved $470K annually by automating and digitizing key operational processes",
+      context:
+        "At Schlumberger, field engineers manually created drilling configuration files for 100+ daily operations worldwide—requiring expert review and repeated iterations",
       bulletPoints: [
-        "Analyzed global operational workflows to identify inefficiencies",
-        "Designed enterprise-grade solution architecture for international deployment",
-        "Developed automated workflows to reduce manual processing time",
-        "Implemented multi-language support and regional customizations",
-        "Created comprehensive training programs for global rollout",
-        "Established monitoring and reporting systems to track cost savings"
+        "Exposed critical inefficiencies in the process and built a strong business case for automation",
+        "Secured executive buy-in and resources by aligning the initiative with cost-saving and scalability goals",
+        "Led user research and iterative testing to validate different solutions",
+        "Designed and built a PowerApp solution, centralizing configuration data to drive reuse and eliminate redundant effort",
+        "Orchestrated global rollout across thousands of field engineers and experts, managing change and adoption at scale",
+        "Continuously measured impact and improved the product through structured user feedback loops",
       ],
-      tags: ["Global Launch", "Enterprise Scale", "Cost Savings"],
-      images: [
-        "https://images.pexels.com/photos/3184293/pexels-photo-3184293.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184327/pexels-photo-3184327.jpeg?auto=compress&cs=tinysrgb&w=800",
-        "https://images.pexels.com/photos/3184312/pexels-photo-3184312.jpeg?auto=compress&cs=tinysrgb&w=800"
-      ]
-    }
+      tags: ["Zero-to-One", "Cost Reduction"],
+      images: [SLB1, SLB2],
+    },
+    {
+      company: "Raisesense",
+      logo: Raise,
+      outcome:
+        "From concept to MVP, enabling early traction and securing pre-seed funding",
+      context:
+        "With powerful proprietary technology enabling secure, zero-exposure data collaboration, Raisesense’s founder needed to go from concept to live MVP — fast. The goal: prove market demand, showcase real-world value, and raise funding by turning deep tech into a usable product.",
+      bulletPoints: [
+        "Built a clickable mock-up to align the team and accelerate investor buy-in",
+        "Led user research to validate assumptions and reduce product risk early",
+        "Delivered a functional MVP with the tech team to test product-market fit faster and cheaper",
+        "Contributed to early traction and investor readiness that helped secure pre-seed investment",
+      ],
+      tags: ["MVP Development", "Fundraising"],
+      images: [raise1, raise2, raise3, raise4],
+    },
+    {
+      company: "ElementsApps",
+      logo: EL,
+      outcome:
+        "Mitigated platform risk and rising AI-driven competition by reshaping product strategy to unlock new growth",
+      context:
+        "Copy & Sync is a Jira app that automates issue duplication and syncing. Facing strategic shifts by Atlassian and emerging AI and automation alternatives, the product needed direction to protect revenue and identify growth beyond its core ecosystem",
+      bulletPoints: [
+        "Led 20+ user and vendor interviews to uncover product strengths, weaknesses, and market perception",
+        "Exposed critical platform risks from Atlassian’s strategic shift, automation and AI, enabling proactive mitigation to secure revenue",
+        "Identified and researched growth opportunities beyond the Atlassian ecosystem to expand market reach",
+        "Contributed to a revised product strategy that mitigated risk and unlocked new revenue",
+        "Built an n8n automation to standardize and streamline competitive watch",
+      ],
+      tags: ["Product Strategy", "User research"],
+      images: [EL1, EL2, EL3, EL4],
+    },
+
+    {
+      company: "Metron",
+      logo: Metron,
+      outcome:
+        "Reduced time-to-activation from months to weeks and increased retention and renewals",
+      context:
+        "Metron is a SaaS platform that helps companies optimize energy use and reduce CO₂ emissions. I worked cross-functionally to improve activation and retention by enhancing usability, aligning development with client needs, and coaching the tech team to adopt agile practices that matched business pace",
+      bulletPoints: [
+        "Improved client dashboards to enhance energy usage visibility, enabling quicker cost-saving insights and reduced time-to-activation from months to weeks",
+        "Collaborated with Data Science to build accurate energy models, helping clients cut energy waste and boosting product stickiness",
+        "Tested clickable mockups early, speeding up validation and reducing misaligned development costs",
+        "Turned complex product needs into prioritized epics and user stories, speeding up delivery and aligning with business objectives",
+        "Managed technical debt with engineering to reduce long-term maintenance costs, improve release stability, and lower support overhead",
+      ],
+      tags: ["Activation & Retention", "AI & ML"],
+      images: [metron1, metron2],
+    },
   ];
 
   const getTagIcon = (tag: string) => {
-    if (tag.includes('Funds') || tag.includes('Cost')) return <DollarSign className="w-3 h-3" />;
-    if (tag.includes('Growth') || tag.includes('Users')) return <Users className="w-3 h-3" />;
-    if (tag.includes('Conversion') || tag.includes('Lift')) return <TrendingUp className="w-3 h-3" />;
-    if (tag.includes('Global') || tag.includes('Enterprise')) return <Globe className="w-3 h-3" />;
-    return <Award className="w-3 h-3" />;
+    if (tag.includes("Cost")) return <DollarSign className="w-3 h-3" />;
+    if (tag.includes("AI")) return <Brain className="w-3 h-3" />;
+    if (tag.includes("Growth") || tag.includes("Retention"))
+      return <TrendingUp className="w-3 h-3" />;
+    if (tag.includes("Zero") || tag.includes("MVP"))
+      return <Rocket className="w-3 h-3" />;
+    if (tag.includes("Strategy")) return <Route className="w-3 h-3" />;
+    if (tag.includes("User")) return <Mic className="w-3 h-3" />;
   };
 
   const nextImage = () => {
     if (selectedCase !== null) {
-      setCurrentImage((prev) => 
-        (prev + 1) % useCases[selectedCase].images.length
+      setCurrentImage(
+        (prev) => (prev + 1) % useCases[selectedCase].images.length
       );
     }
   };
 
   const prevImage = () => {
     if (selectedCase !== null) {
-      setCurrentImage((prev) => 
+      setCurrentImage((prev) =>
         prev === 0 ? useCases[selectedCase].images.length - 1 : prev - 1
       );
     }
@@ -147,7 +189,6 @@ const UseCasesSection = () => {
       closeCase();
     }
   };
-
   return (
     <section id="use-cases" className="py-20 bg-gray-50">
       <div className="max-w-7xl mx-auto px-6 lg:px-8">
@@ -156,7 +197,8 @@ const UseCasesSection = () => {
             Real Impact, Real Results
           </h2>
           <p className="text-xl text-gray-600 max-w-3xl mx-auto">
-            Here's how I've helped companies transform their product development and achieve measurable business outcomes.
+            Here's how I've helped companies transform their product development
+            and achieve measurable business outcomes.
           </p>
         </div>
 
@@ -165,9 +207,9 @@ const UseCasesSection = () => {
             <div
               key={index}
               onClick={() => openCase(index)}
-              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 overflow-hidden group border border-gray-100"
+              className="bg-white rounded-xl shadow-lg hover:shadow-xl transition-all duration-300 cursor-pointer transform hover:-translate-y-1 overflow-hidden group border border-gray-100 h-full"
             >
-              <div className="p-8">
+              <div className="p-8 flex flex-col h-full">
                 <div className="flex items-center gap-4 mb-6">
                   <img
                     src={useCase.logo}
@@ -178,7 +220,7 @@ const UseCasesSection = () => {
                     {useCase.company}
                   </h3>
                 </div>
-                
+
                 <div className="flex flex-wrap gap-2 mb-4">
                   {useCase.tags.map((tag, tagIndex) => (
                     <span
@@ -190,15 +232,17 @@ const UseCasesSection = () => {
                     </span>
                   ))}
                 </div>
-                
-                <p className="text-gray-700 mb-6 leading-relaxed">
+
+                <p className="text-gray-700 mb-6 leading-relaxed flex-grow">
                   {useCase.outcome}
                 </p>
-                
-                <div className="group/button relative inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition-all duration-300 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg">
+
+                <div className="group/button relative inline-flex items-center text-blue-600 font-bold hover:text-blue-700 transition-all duration-300 bg-blue-50 hover:bg-blue-100 px-4 py-2 rounded-lg w-fit">
                   <div className="absolute inset-0 bg-gradient-to-r from-blue-100 to-blue-200 opacity-0 group-hover/button:opacity-50 transition-opacity duration-300 rounded-lg"></div>
                   <Sparkles className="w-4 h-4 mr-2 group-hover/button:rotate-12 transition-transform relative z-10" />
-                  <span className="relative z-10 group-hover/button:translate-x-1 transition-transform">View Details</span>
+                  <span className="relative z-10 group-hover/button:translate-x-1 transition-transform">
+                    View Details
+                  </span>
                   <ExternalLink className="w-4 h-4 ml-2 group-hover/button:translate-x-1 transition-transform relative z-10" />
                 </div>
               </div>
@@ -206,113 +250,151 @@ const UseCasesSection = () => {
           ))}
         </div>
 
-        {/* Modal */}
+        {/* Unified Modal Layout */}
         {selectedCase !== null && (
-          <div 
-            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-4"
+          <div
+            className="fixed inset-0 bg-black bg-opacity-80 flex items-center justify-center z-50 p-2 sm:p-4"
             onClick={handleBackdropClick}
           >
-            <div className="bg-white rounded-xl max-w-6xl w-full h-[85vh] flex overflow-hidden relative">
+            <div className="bg-white rounded-xl w-full max-w-6xl max-h-[95vh] flex flex-col overflow-hidden relative">
               <button
                 onClick={closeCase}
-                className="absolute top-4 right-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-20"
+                className="absolute top-2 right-2 sm:top-4 sm:right-4 p-2 hover:bg-gray-100 rounded-full transition-colors z-20 bg-white shadow-md"
               >
-                <X className="w-6 h-6" />
+                <X className="w-5 h-5 sm:w-6 sm:h-6" />
               </button>
 
-              {/* Left Side - Content */}
-              <div className="w-1/2 flex flex-col">
-                {/* Fixed Header */}
-                <div className="p-8 border-b border-gray-100 flex-shrink-0">
-                  <div className="flex items-center gap-4 mb-4">
+              {/* Image Carousel Section - Only render if images exist - Fixed at top */}
+              {useCases[selectedCase].images &&
+                useCases[selectedCase].images.length > 0 && (
+                  <div className="bg-gray-50 relative flex-shrink-0 h-64 sm:h-72 md:h-80 lg:h-96">
+                    {/* Navigation Buttons */}
+                    {useCases[selectedCase].images.length > 1 && (
+                      <>
+                        <button
+                          onClick={prevImage}
+                          className="absolute left-2 sm:left-4 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 z-10"
+                        >
+                          <ChevronLeft className="w-4 h-4 sm:w-6 sm:h-6 text-gray-600" />
+                        </button>
+
+                        <button
+                          onClick={nextImage}
+                          className="absolute right-2 sm:right-4 top-1/2 transform -translate-y-1/2 p-2 sm:p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 z-10"
+                        >
+                          <ChevronRight className="w-4 h-4 sm:w-6 sm:h-6 text-gray-600" />
+                        </button>
+                      </>
+                    )}
+
+                    {/* Image Container with Proper Aspect Ratio */}
+                    <div className="w-full h-full flex items-center justify-center overflow-hidden">
+                      <img
+                        src={useCases[selectedCase].images[currentImage]}
+                        alt={`${useCases[selectedCase].company} screenshot ${
+                          currentImage + 1
+                        }`}
+                        className="max-w-full max-h-full object-contain"
+                        style={{ minHeight: "200px" }}
+                      />
+                    </div>
+
+                    {/* Image Dots - Only show if multiple images */}
+                    {useCases[selectedCase].images.length > 1 && (
+                      <div className="absolute bottom-2 sm:bottom-4 left-1/2 transform -translate-x-1/2">
+                        <div className="flex gap-1 sm:gap-2 bg-black/20 rounded-full px-2 py-1">
+                          {useCases[selectedCase].images.map((_, index) => (
+                            <button
+                              key={index}
+                              onClick={() => setCurrentImage(index)}
+                              className={`w-2 h-2 sm:w-3 sm:h-3 rounded-full transition-colors ${
+                                index === currentImage
+                                  ? "bg-white"
+                                  : "bg-white/50"
+                              }`}
+                            />
+                          ))}
+                        </div>
+                      </div>
+                    )}
+                  </div>
+                )}
+
+              {/* Scrollable Content - Now includes header */}
+              <div className="flex-1 overflow-y-auto">
+                {/* Header Section - Now part of scrollable content */}
+                <div className="p-4 sm:p-6 md:p-8 border-b border-gray-100">
+                  <div className="flex items-start sm:items-center gap-3 sm:gap-4 mb-4">
                     <img
                       src={useCases[selectedCase].logo}
                       alt={`${useCases[selectedCase].company} logo`}
-                      className="w-16 h-16 rounded-lg object-cover shadow-md"
+                      className="w-12 h-12 sm:w-16 sm:h-16 rounded-lg object-cover shadow-md flex-shrink-0"
                     />
-                    <div>
-                      <h3 className="text-2xl font-bold text-gray-900">
+                    <div className="min-w-0 flex-1">
+                      <h3 className="text-xl sm:text-2xl md:text-3xl font-bold text-gray-900 break-words">
                         {useCases[selectedCase].company}
                       </h3>
-                      <div className="flex flex-wrap gap-2 mt-2">
+                      <div className="flex flex-wrap gap-1 sm:gap-2 mt-2">
                         {useCases[selectedCase].tags.map((tag, tagIndex) => (
                           <span
                             key={tagIndex}
-                            className="inline-flex items-center gap-1 px-2 py-1 rounded-full text-xs font-medium bg-blue-100 text-blue-700"
+                            className="inline-flex items-center gap-1 px-2 py-1 sm:px-3 sm:py-1 rounded-full text-xs sm:text-sm font-medium bg-blue-100 text-blue-700"
                           >
                             {getTagIcon(tag)}
-                            {tag}
+                            <span className="truncate">{tag}</span>
                           </span>
                         ))}
                       </div>
                     </div>
                   </div>
-                  
-                  <h4 className="text-xl font-semibold text-blue-600">
-                    {useCases[selectedCase].outcome}
-                  </h4>
                 </div>
 
-                {/* Scrollable Content */}
-                <div className="flex-1 overflow-y-auto p-8 pb-12">
-                  <div className="mb-8">
-                    <h5 className="text-lg font-semibold text-gray-900 mb-4">Context</h5>
-                    <p className="text-gray-700 leading-relaxed">
-                      {useCases[selectedCase].context}
-                    </p>
-                  </div>
-                  
-                  <div className="pb-8">
-                    <h5 className="text-lg font-semibold text-gray-900 mb-4">What I Did</h5>
-                    <ul className="space-y-4">
-                      {useCases[selectedCase].bulletPoints.map((point, index) => (
-                        <li key={index} className="flex items-start gap-3">
-                          <div className="w-2 h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-gray-700 leading-relaxed">{point}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
-                </div>
-              </div>
+                {/* Content Sections */}
+                <div className="p-4 sm:p-6 md:p-8">
+                  <div className="space-y-6 sm:space-y-8">
+                    {/* Outcome Section */}
+                    <div>
+                      <h5 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                        <div className="w-1 h-6 bg-blue-600 rounded-full"></div>
+                        Outcome
+                      </h5>
+                      <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                        {useCases[selectedCase].outcome}
+                      </p>
+                    </div>
 
-              {/* Right Side - Image Carousel */}
-              <div className="w-1/2 bg-gray-50 flex flex-col relative">
-                {/* Navigation Arrows - Positioned in the middle */}
-                <button
-                  onClick={prevImage}
-                  className="absolute left-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 z-10"
-                >
-                  <ChevronLeft className="w-6 h-6 text-gray-600" />
-                </button>
-                
-                <button
-                  onClick={nextImage}
-                  className="absolute right-4 top-1/2 transform -translate-y-1/2 p-3 bg-white/90 hover:bg-white rounded-full shadow-lg hover:shadow-xl transition-all duration-300 border border-gray-200 z-10"
-                >
-                  <ChevronRight className="w-6 h-6 text-gray-600" />
-                </button>
+                    {/* Context Section */}
+                    <div>
+                      <h5 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                        <div className="w-1 h-6 bg-green-600 rounded-full"></div>
+                        Context
+                      </h5>
+                      <p className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                        {useCases[selectedCase].context}
+                      </p>
+                    </div>
 
-                <div className="flex-1 relative">
-                  <img
-                    src={useCases[selectedCase].images[currentImage]}
-                    alt={`${useCases[selectedCase].company} screenshot ${currentImage + 1}`}
-                    className="w-full h-full object-cover"
-                  />
-                </div>
-                
-                <div className="p-4 bg-white border-t">
-                  <div className="flex justify-center">
-                    <div className="flex gap-2">
-                      {useCases[selectedCase].images.map((_, index) => (
-                        <button
-                          key={index}
-                          onClick={() => setCurrentImage(index)}
-                          className={`w-3 h-3 rounded-full transition-colors ${
-                            index === currentImage ? 'bg-blue-600' : 'bg-gray-300'
-                          }`}
-                        />
-                      ))}
+                    {/* What I Did Section - Removed bottom padding */}
+                    <div>
+                      <h5 className="text-lg font-semibold text-gray-900 mb-4 flex items-center gap-2">
+                        <div className="w-1 h-6 bg-purple-600 rounded-full"></div>
+                        What I did
+                      </h5>
+                      <ul className="space-y-3 sm:space-y-4">
+                        {useCases[selectedCase].bulletPoints.map(
+                          (point, index) => (
+                            <li
+                              key={index}
+                              className="flex items-start gap-2 sm:gap-3"
+                            >
+                              <div className="w-1.5 h-1.5 sm:w-2 sm:h-2 bg-blue-600 rounded-full mt-2 flex-shrink-0"></div>
+                              <span className="text-gray-700 leading-relaxed text-sm sm:text-base">
+                                {point}
+                              </span>
+                            </li>
+                          )
+                        )}
+                      </ul>
                     </div>
                   </div>
                 </div>
